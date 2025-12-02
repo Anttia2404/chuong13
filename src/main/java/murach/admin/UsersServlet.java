@@ -52,10 +52,9 @@ public class UsersServlet extends HttpServlet {
                                source, offers, contactMethod);
             UserDB.update(user);
             
-            // Redirect to display all users
-            List<User> users = UserDB.selectUsers();
-            request.setAttribute("users", users);
-            url = "/admin/index.jsp";
+            // Redirect to display all users (prevents re-update on refresh)
+            response.sendRedirect(request.getContextPath() + "/admin/users");
+            return;
         }
         else if (action.equals("delete_user")) {
             // Delete user from database
@@ -65,10 +64,9 @@ public class UsersServlet extends HttpServlet {
                 UserDB.delete(user);
             }
             
-            // Redirect to display all users
-            List<User> users = UserDB.selectUsers();
-            request.setAttribute("users", users);
-            url = "/admin/index.jsp";
+            // Redirect to display all users (prevents re-deletion on refresh)
+            response.sendRedirect(request.getContextPath() + "/admin/users");
+            return;
         }
 
         getServletContext()
