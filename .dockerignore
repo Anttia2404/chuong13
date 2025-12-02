@@ -1,0 +1,22 @@
+# Ignore build artifacts
+target/
+build/
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+nbproject/private/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore local config
+*.local

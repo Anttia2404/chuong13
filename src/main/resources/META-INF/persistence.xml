@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    
+    <!-- Persistence unit for Email List application -->
+    <persistence-unit name="emailListPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>murach.business.User</class>
+        <properties>
+            <!-- PostgreSQL Database connection properties (Render) -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://dpg-d47cvdi4d50c73834gmg-a.oregon-postgres.render.com:5432/my_portfolio_db_vxq1"/>
+            <property name="jakarta.persistence.jdbc.user" value="my_portfolio_db_vxq1_user"/>
+            <property name="jakarta.persistence.jdbc.password" value="E3XY5g7Z35scTCzeB49CtUZFOAJVUiPG"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            
+            <!-- EclipseLink properties -->
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+            
+            <!-- Schema generation - create tables if they don't exist -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+        </properties>
+    </persistence-unit>
+    
+    <!-- Persistence unit for User Admin application -->
+    <persistence-unit name="userAdminPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>murach.business.User</class>
+        <properties>
+            <!-- PostgreSQL Database connection properties (Render) -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://dpg-d47cvd14d50c73834mg-a.oregon-postgres.render.com:5432/my_portfolio_db_vxq1"/>
+            <property name="jakarta.persistence.jdbc.user" value="my_portfolio_db_vxq1_user"/>
+            <property name="jakarta.persistence.jdbc.password" value="E3XY5g7Z35scTCzeB49CtUZFOAJVUiPG"/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            
+            <!-- EclipseLink properties -->
+            <property name="eclipselink.logging.level" value="INFO"/>
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+    </persistence-unit>
+    
+</persistence>

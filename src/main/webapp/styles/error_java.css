@@ -1,0 +1,23 @@
+/* Code cho file styles/error_java.css */
+.error-details {
+    text-align: left;
+    background-color: #fff8f8; /* Nền hồng nhạt */
+    border: 1px solid #D8000C; /* Viền đỏ */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    max-width: 600px;
+    width: 90%;
+    font-family: 'Courier New', Courier, monospace; /* Font cho code */
+}
+
+.error-details h2 {
+    margin-top: 0;
+    color: #D8000C;
+    font-family: sans-serif; /* Quay lại font thường */
+}
+
+.error-details p {
+    font-size: 1rem;
+    word-break: break-all; /* Tự ngắt các thông báo lỗi dài */
+}
