@@ -46,7 +46,7 @@
         </c:if>
         
         <div class="advice">
-            <p><a href="${pageContext.request.contextPath}/index.jsp">📝 Back to Survey</a></p>
+            <p><a href="${pageContext.request.contextPath}/index.jsp">Back to Survey</a></p>
         </div>
     </div>
 </body>

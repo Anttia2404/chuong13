@@ -1,6 +1,6 @@
 
         <div class="advice">
-            <p><a href="${pageContext.request.contextPath}/admin/users">👤 User Admin</a></p>
+            <p><a href="${pageContext.request.contextPath}/admin/users">User Admin</a></p>
         </div>
         <footer>
             <p class="copyright">
